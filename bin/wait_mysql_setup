@@ -1,0 +1,7 @@
+#!/bin/bash
+
+for i in $(seq 100)
+do
+    mysql -uroot -h127.0.0.1 -e 'show databases' 2>> /dev/null || (sleep 1; false) && break
+    echo "Waiting mysql setup... ${i}"
+done
