@@ -4,7 +4,7 @@ services:
     image: mysql:8
     volumes:
       - mysql-data:/var/lib/mysql
-      - ./vendor/mysql/init:/docker-entrypoint-initdb.d
+      - ./db/init:/docker-entrypoint-initdb.d
     environment:
       MYSQL_ALLOW_EMPTY_PASSWORD: 1
     ports:
