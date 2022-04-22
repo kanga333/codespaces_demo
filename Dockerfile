@@ -1,7 +1,7 @@
 FROM ruby:2.7.6-bullseye
 
 RUN apt update && \
-    apt install -y zsh fish default-mysql-client
+    apt install -y zsh fish default-mysql-client sudo netcat
 
 # https://github.com/cli/cli/blob/trunk/docs/install_linux.md
 RUN curl -fsSL https://cli.github.com/packages/githubcli-archive-keyring.gpg | dd of=/usr/share/keyrings/githubcli-archive-keyring.gpg && \
