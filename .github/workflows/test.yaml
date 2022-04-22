@@ -46,3 +46,4 @@ jobs:
           docker-compose up -d
           bin/wait_mysql_setup
           rails test
+          python --version

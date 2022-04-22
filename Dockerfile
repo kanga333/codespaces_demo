@@ -25,6 +25,8 @@ RUN gem install bundler:2.3.5 && \
     bundle install && \
     rm -f Gemfile Gemfile.lock
 
+RUN apt-get install -y python
+
 ENTRYPOINT ["/usr/local/share/docker-init.sh"]
 VOLUME [ "/var/lib/docker" ]
 CMD ["sleep", "infinity"]
