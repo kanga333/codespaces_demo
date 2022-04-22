@@ -21,6 +21,7 @@ jobs:
         run: echo "${{ secrets.GITHUB_TOKEN }}" | docker login ghcr.io -u $ --password-stdin
       - name: Push image
         run: |
+          chmod 0666 Gemfile*
           docker buildx build \
             --push \
             --cache-from=$IMAGE_ID:cache \
